@@ -14,26 +14,31 @@
 	<!-- Your custom styles (optional) -->
 	<link rel="stylesheet" href="css/style.css">
 
-	<title>Test</title>
+	<title>Menu</title>
 </head>
 
 <body>
 
+	<div  id="sidebar0" class="toggle-btn c-hamburger c-hamburger--htx" onclick="openMenu()">
+  		<span>нажми</span>
+	</div>
+	<div id="sidebar">	
+		<ul>
+		 <li onclick="closeMenu()"><a class="close" href="#">О КОМПАНИИ</a></li>
+		 <li onclick="closeMenu()" class="close"><a href="#">СОТРУДНИЧЕСТВО</a></li>
+		 <li onclick="closeMenu()" class="close"><a href="#">ПРЕИМУЩЕСТВА</a></li>
+		 <li onclick="closeMenu()" class="close"><a href="#">СТАРТОВАЯ ПРОГРАММА</a></li>
+		 <li onclick="closeMenu()" class="close"><a href="#">БИЗНЕС</a></li>
+		 <li onclick="closeMenu()" class="close"><a href="#">НАША КОМАНДА</a></li>
+		 <li onclick="closeMenu()" class="close"><a href="#">ОТЗЫВЫ</a></li>
+		 <li onclick="closeMenu()" class="close"><a href="#">РЕГИСТРАЦИЯ</a></li>
+		 <li onclick="closeMenu()" class="close"><a href="#">КОНТАКТЫ</a></li>
+		</ul>
+	</div>
 
-	<section class="footer" id="contacts">
-		<div class="container">
-
-		</div>
-	</section>
-
-
-	<!-- SCRIPTS -->
-	
-	<!-- JQuery -->
-	<script type=" text/javascript " src="js/jquery-3.3.1.min.js "></script>
 
 	<!-- JavaScript -->
-	<script type="text/javascript " src="script.js "></script>
+	<script type="text/javascript" src="js/script.js"></script>
 
 </body>
 

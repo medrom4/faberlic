@@ -1,18 +1,146 @@
-/*
-font-family: 'Amatic SC', cursive;
-font-family: 'Oswald', sans-serif;
-*/
+* {
+	margin: 0;
+	padding: 0;
+}
 
-.css-adaptiv {
+#sidebar {
+	position: fixed;
+	width: 252px;
+	height: 378px;
+	background: rgba(252, 61, 112, 0.94);
+	top: -478px;
+	left: -100px;
+	text-align: center;
+	-moz-transition: all 200ms;
+	-webkit-transition: all 200ms;
+	transition: all 200ms;
+}
+
+#sidebar.active {
+	top: 40px;
+	left: 350px;
+}
+
+#sidebar ul li {
+	width: 90%;
+	font-size: 13px;
+	list-style: none;
+	padding: 13px 15px;
+}
+
+#sidebar ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+	text-shadow: 0px 2px 4px #000 !important;
+}
+
+#sidebar0 {
+	position: absolute;
+	left: 570px;
+	top: 20px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+
+/*  */
+
+.c-hamburger {
 	display: block;
-	max-width: 100%;
-	height: auto;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 56px;
+	height: 40px;
+	font-size: 0;
+	text-indent: -9999px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+	border: none;
+	cursor: pointer;
+	transition: background 0.3s;
 }
 
-body {
-	font-family: 'Amatic SC', cursive;
+.c-hamburger:focus {
+	outline: none;
 }
 
-div.col-12 img {
-	margin-top: 50%;	
+.c-hamburger span {
+	display: block;
+	position: absolute;
+	top: 15px;
+	left: 18px;
+	right: 18px;
+	height: 0.2vw;
+	background: black;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 100%;
+	height: 0.2vw;
+	background-color: black;
+	content: "";
+}
+
+.c-hamburger span::before {
+	top: -5px;
+}
+
+.c-hamburger span::after {
+	bottom: -5px;
+}
+
+.c-hamburger--htx {
+	background-color: transparent;
+}
+
+.c-hamburger--htx span {
+	transition: background 0s 0.3s;
+}
+
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+	transition-duration: 0.3s, 0.3s;
+	transition-delay: 0.3s, 0s;
+}
+
+.c-hamburger--htx span::before {
+	transition-property: top, transform;
+}
+
+.c-hamburger--htx span::after {
+	transition-property: bottom, transform;
+}
+
+/* состояние active при открытом меню  */
+
+.c-hamburger--htx.is-active {
+	background-color: transparent;
+}
+
+.c-hamburger--htx.is-active span {
+	background: none;
+}
+
+.c-hamburger--htx.is-active span::before {
+	top: 0;
+	transform: rotate(45deg);
+}
+
+.c-hamburger--htx.is-active span::after {
+	bottom: 0;
+	transform: rotate(-45deg);
+}
+
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+	transition-delay: 0s, 0.3s;
 }
